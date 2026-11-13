@@ -1,8 +1,4 @@
-{ config, lib, ... }:
-
-let
-  userConfigOptions = config.userConfigOptions;
-in
+{ lib, ... }:
 {
   options.userConfigOptions = {
     defaultUser = {
@@ -11,6 +7,14 @@ in
         default = "zaroc";
         description = "Username for the Default user";
       };
+    };
+  };
+
+  options.debug = {
+    vm = lib.mkOption {
+      type = lib.types.bool;
+      default = false;
+      description = "Wether youre building a host for a VM";
     };
   };
 }
