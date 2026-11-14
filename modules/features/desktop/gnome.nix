@@ -14,6 +14,9 @@
       services.desktopManager.gnome.enable = true;
 
       environment.systemPackages = extensions ++ [ pkgs.tokyonight-gtk-theme ];
+
+      services.gnome.gnome-initial-setup.enable = false;
+
       programs.dconf.profiles.user.databases = [
         {
           settings = {
