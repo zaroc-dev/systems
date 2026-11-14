@@ -317,11 +317,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1794660586,
-        "narHash": "sha256-Olb7TFxaYmao1ZZ/q003G3ClHE/OHV05JXsWa7/S69U=",
+        "lastModified": 1794680707,
+        "narHash": "sha256-JAFTLGXO9YBG4TlU89wAvZdJ7yVQl1yWwoaY7SbFANY=",
         "owner": "zaroc-dev",
         "repo": "yuki",
-        "rev": "58db4769d361c1cecc01e93b828c24da46fde516",
+        "rev": "9b72d95ae8553137ddb65a5279b34ab04bf53d68",
         "type": "github"
       },
       "original": {
