@@ -1,8 +1,7 @@
 { self, ... }: {
-  flake.nixModules.host = { ... }: {
+  flake.nixosModules.host = { ... }: {
     modules = with self.nixosModules; [
-      user
-      networking
+      desktop
     ];
   };
 }

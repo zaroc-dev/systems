@@ -1,4 +1,4 @@
-{ ... }: {
+{ inputs, ... }: {
 
   flake.nixosModules.nix-settings = { ... }: {
 
@@ -16,6 +16,12 @@
       dates = "weekly";
       options = "--delete-older-than 30d";
       randomizedDelaySec = "30min";
+    };
+  };
+
+  perSystem = { system, ... }: {
+    _module.args = {
+      unstablePkgs = import inputs.nixpkgs-unstable { inherit system; };
     };
   };
 }

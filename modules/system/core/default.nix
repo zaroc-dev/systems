@@ -5,8 +5,9 @@
       nix-settings
       user
       networking
-
       vm
+      locale
+      fonts
     ];
   };
 }

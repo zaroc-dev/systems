@@ -1,7 +1,7 @@
 HOST:=$(shell hostname)
 
 build-vm:
-	build-vm && nixos-rebuild build-vm --flake .#${HOST}
+	nixos-rebuild build-vm --flake .#${HOST}
 	
-vm:
-	build-vm && ./result/bin/run-*-vm
+vm: build-vm
+	./result/bin/run-*-vm

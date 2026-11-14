@@ -1,0 +1,133 @@
+binds {
+    // yuki and everyday apps
+    Mod+H { show-hotkey-overlay; }
+
+    Mod+A hotkey-overlay-title="Start Menu" { spawn "yuki" "ipc" "call" "bar" "toggle" "start"; }
+    Mod+Space hotkey-overlay-title="App Launcher" { spawn "yuki" "ipc" "call" "launcher" "toggle"; }
+    Mod+E hotkey-overlay-title="Open File Explorer" { spawn "nautilus"; }
+    Mod+L hotkey-overlay-title="Lock the Screen" { spawn "yuki" "ipc" "call" "lock" "lock"; }
+    Mod+Comma hotkey-overlay-title="Shell Settings" { spawn "yuki" "ipc" "call" "settings" "toggle"; }
+    Mod+C hotkey-overlay-title="Open Code Editor" { spawn "code"; }
+    Mod+B hotkey-overlay-title="Open Browser" { spawn "brave"; }
+    Mod+Shift+S hotkey-overlay-title="Capture Region" { spawn "yuki" "ipc" "call" "screenshot" "region"; }
+    Mod+V hotkey-overlay-title="Clipboard History" { spawn "yuki" "ipc" "call" "clipboard" "toggle"; }
+    Mod+Shift+W hotkey-overlay-title="Rinka Wallpaper Editor" { spawn "rinka"; }
+    Mod+N hotkey-overlay-title="Notifications" { spawn "yuki" "ipc" "call" "bar" "toggle" "notifications"; }
+    Mod+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
+    Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
+
+    Alt+Tab hotkey-overlay-title="Switch Windows" { spawn "yuki" "ipc" "call" "switcher" "next"; }
+    Alt+Shift+Tab hotkey-overlay-title="Switch Windows Backward" { spawn "yuki" "ipc" "call" "switcher" "prev"; }
+
+    // yuki controls also show its on-screen display.
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "yuki" "ipc" "call" "audio" "up" "10"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "yuki" "ipc" "call" "audio" "down" "10"; }
+    XF86AudioMute allow-when-locked=true { spawn "yuki" "ipc" "call" "audio" "mute"; }
+    XF86AudioMicMute allow-when-locked=true { spawn "yuki" "ipc" "call" "audio" "micMute"; }
+    XF86AudioPlay allow-when-locked=true { spawn "yuki" "ipc" "call" "media" "toggle"; }
+    XF86AudioNext allow-when-locked=true { spawn "yuki" "ipc" "call" "media" "next"; }
+    XF86AudioPrev allow-when-locked=true { spawn "yuki" "ipc" "call" "media" "previous"; }
+
+    XF86MonBrightnessUp allow-when-locked=true { spawn "yuki" "ipc" "call" "brightness" "up"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "yuki" "ipc" "call" "brightness" "down"; }
+
+    // Niri navigation and window management
+    Mod+Tab repeat=false { toggle-overview; }
+
+    Mod+Q repeat=false { close-window; }
+
+    Mod+Left  { focus-column-left; }
+    Mod+Right { focus-column-right; }
+    Mod+Up { focus-workspace-up; }
+    Mod+Down { focus-workspace-down; }
+    
+    Mod+Ctrl+Down { move-window-to-workspace-down; }
+    Mod+Ctrl+Up   { move-window-to-workspace-up; }
+
+    Mod+Ctrl+Left  { move-column-left-or-to-monitor-left; }
+    Mod+Ctrl+Right { move-column-right-or-to-monitor-right; }
+    
+    Mod+Shift+Left  { focus-monitor-left; }
+    Mod+Shift+Right { focus-monitor-right; }
+
+    Mod+Shift+Ctrl+Left  { move-column-to-monitor-left; }
+    Mod+Shift+Ctrl+Down  { move-column-to-monitor-down; }
+    Mod+Shift+Ctrl+Up    { move-column-to-monitor-up; }
+    Mod+Shift+Ctrl+Right { move-column-to-monitor-right; }
+
+    Mod+Shift+Down      { focus-workspace-down; }
+    Mod+Shift+Up        { focus-workspace-up; }
+    Mod+U              { focus-workspace-down; }
+    Mod+I              { focus-workspace-up; }
+
+    Mod+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
+    Mod+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
+    Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
+    Mod+Ctrl+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
+
+    Mod+WheelScrollRight      { focus-column-right; }
+    Mod+WheelScrollLeft       { focus-column-left; }
+    Mod+Ctrl+WheelScrollRight { move-column-right; }
+    Mod+Ctrl+WheelScrollLeft  { move-column-left; }
+
+    Mod+Shift+WheelScrollDown      { focus-column-right; }
+    Mod+Shift+WheelScrollUp        { focus-column-left; }
+    Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
+    Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
+
+    // Workspace numbers are best effort because Niri creates workspaces dynamically.
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+5 { focus-workspace 5; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
+    Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
+    Mod+Ctrl+1 { move-column-to-workspace 1; }
+    Mod+Ctrl+2 { move-column-to-workspace 2; }
+    Mod+Ctrl+3 { move-column-to-workspace 3; }
+    Mod+Ctrl+4 { move-column-to-workspace 4; }
+    Mod+Ctrl+5 { move-column-to-workspace 5; }
+    Mod+Ctrl+6 { move-column-to-workspace 6; }
+    Mod+Ctrl+7 { move-column-to-workspace 7; }
+    Mod+Ctrl+8 { move-column-to-workspace 8; }
+    Mod+Ctrl+9 { move-column-to-workspace 9; }
+
+    // Column layout
+    Mod+BracketLeft  { consume-or-expel-window-left; }
+    Mod+BracketRight { consume-or-expel-window-right; }
+
+    Mod+Period { expel-window-from-column; }
+
+    Mod+R { switch-preset-column-width; }
+    Mod+Shift+R { switch-preset-window-height; }
+    Mod+Ctrl+R { reset-window-height; }
+    
+    Mod+F { maximize-column; }
+    Mod+Shift+F { fullscreen-window; }
+    Mod+Ctrl+F { expand-column-to-available-width; }
+
+    Mod+Ctrl+C { center-visible-columns; }
+
+    Mod+Minus { set-column-width "-10%"; }
+    Mod+Plus { set-column-width "+10%"; }
+
+    Mod+Shift+Minus { set-window-height "-10%"; }
+    Mod+Shift+Equal { set-window-height "+10%"; }
+
+    Mod+T       { toggle-window-floating; }
+    Mod+Shift+T { switch-focus-between-floating-and-tiling; }
+
+    Mod+W { toggle-column-tabbed-display; }
+
+    // Keep Niri's native screenshot as a fallback for yuki capture.
+    Print { screenshot; }
+    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+
+    Mod+Shift+E { quit; }
+    Ctrl+Alt+Delete { quit; }
+
+    Mod+Shift+P { power-off-monitors; }
+}

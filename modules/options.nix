@@ -9,12 +9,4 @@
       };
     };
   };
-
-  options.debug = {
-    vm = lib.mkOption {
-      type = lib.types.bool;
-      default = false;
-      description = "Wether youre building a host for a VM";
-    };
-  };
 }

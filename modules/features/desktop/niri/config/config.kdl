@@ -1,0 +1,108 @@
+prefer-no-csd
+
+include "windowrules.kdl"
+include "monitor.kdl"
+include "keybinds.kdl"
+
+xwayland-satellite {
+    path "xwayland-satellite"
+}
+
+cursor {
+    xcursor-theme "ye-shunguang-zzz-cursors"
+    xcursor-size 24
+
+    hide-when-typing
+    hide-after-inactive-ms 1000
+}
+
+input {
+    keyboard {
+        xkb {
+            layout "de"
+        }
+        numlock
+    }
+
+    touchpad {
+        tap
+    }
+
+    touch {
+        map-to-output "eDP-1"
+    }
+
+    tablet {
+        map-to-output "eDP-1"
+    }
+
+    mouse {
+        accel-profile "flat"
+    }
+
+    trackpoint {
+    }
+
+    focus-follows-mouse max-scroll-amount="0%"
+}
+
+layout {
+    gaps 12
+
+    background-color "transparent"
+
+    center-focused-column "never"
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    default-column-width { proportion 0.5; }
+
+    focus-ring {
+        width 2
+    }
+
+    shadow {
+        on
+        softness 30
+
+        spread 5
+
+        offset x=0 y=5
+
+        color "#0007"
+    }
+
+    struts {
+    }
+}
+
+spawn-at-startup "yuki"
+spawn-sh-at-startup "mkdir -p ~/Screenshots/"
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+screenshot-path "~/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+animations {
+}
+
+layer-rule {
+    match namespace="^rinka-backdrop$"
+    place-within-backdrop true
+}
+
+debug {
+    honor-xdg-activation-with-invalid-serial
+    // Work around corrupted primary-plane scanout on NVIDIA. Without this,
+    // the HDMI output can show the frame in only one quarter of the panel.
+    disable-direct-scanout
+}
+
+// yuki regenerates this file when the palette changes. Keep it last so it wins.
+include optional=true "/home/zaroc/.local/state/yuki/theme/niri.kdl"
