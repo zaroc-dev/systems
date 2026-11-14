@@ -1,6 +1,6 @@
 { self, ... }: {
-  flake.nixosModules.desktop = { ... }: {
-    imports = with self.nixosModules; [
+  flake.modules.nixos.desktop = { ... }: {
+    imports = with self.modules.nixos; [
       kitty
 
       niri

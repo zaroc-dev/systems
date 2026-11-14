@@ -5,7 +5,7 @@
 }:
 {
 
-  flake.nixosModules.niri = moduleWithSystem (
+  flake.modules.nixos.niri = moduleWithSystem (
     { pkgs, self', ... }:
     {
       programs.niri = {
@@ -29,6 +29,7 @@
 
           package = unstablePkgs.niri;
 
+          env.XCURSOR_PATH = "${pkgs.bibata-cursors}/share/icons";
           settings = {
             spawn-at-startup = [
               (lib.getExe pkgs.xwayland-satellite)
@@ -36,10 +37,18 @@
             ];
 
             prefer-no-csd = { };
+            cursor = {
+              xcursor-theme = "Bibata-Modern-Classic";
+              xcursor-size = 24;
+            };
 
             binds = {
               "Mod+Return".spawn-sh = lib.getExe self'.packages.kitty;
               "Mod+Q".close-window = { };
+            };
+
+            hotkey-overlay = {
+              skip-at-startup = { };
             };
 
           };

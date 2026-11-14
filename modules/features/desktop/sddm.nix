@@ -1,6 +1,6 @@
 { inputs, ... }: {
 
-  flake.nixosModules.sddm = { ... }: {
+  flake.modules.nixos.sddm = { ... }: {
     imports = [ inputs.yuki.nixosModules.yuki ];
 
     services.displayManager.sddm = {

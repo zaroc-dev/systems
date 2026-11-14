@@ -3,7 +3,7 @@
   perSystem = { inputs', ... }: {
     packages.helium = inputs'.helium.packages.default;
   };
-  flake.nixosModules.helium = moduleWithSystem (
+  flake.modules.nixos.helium = moduleWithSystem (
     { pkgs, inputs', ... }: {
       imports = [
         inputs.helium.nixosModules.default

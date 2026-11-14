@@ -1,6 +1,6 @@
 { inputs, ... }: {
 
-  flake.nixosModules.nix-settings = { ... }: {
+  flake.modules.nixos.nix-settings = { ... }: {
 
     system.stateVersion = "26.05";
 

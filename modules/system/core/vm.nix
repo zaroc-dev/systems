@@ -1,5 +1,5 @@
 { ... }: {
-  flake.nixosModules.vm =
+  flake.modules.nixos.vm =
     { ... }:
     {
       virtualisation.vmVariant = {

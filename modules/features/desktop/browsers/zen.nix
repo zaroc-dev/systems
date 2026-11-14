@@ -34,7 +34,7 @@
       };
     };
 
-  flake.nixosModules.zen = moduleWithSystem (
+  flake.modules.nixos.zen = moduleWithSystem (
     { self', ... }:
     { pkgs, ... }:
     let

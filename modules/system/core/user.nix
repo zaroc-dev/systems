@@ -3,7 +3,7 @@ let
   username = config.userConfigOptions.defaultUser.name;
 in
 {
-  flake.nixosModules.user = { ... }: {
+  flake.modules.nixos.user = { ... }: {
     users.users.${username} = {
       isNormalUser = true;
 

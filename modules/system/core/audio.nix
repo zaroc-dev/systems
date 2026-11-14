@@ -1,6 +1,6 @@
 { ... }: {
 
-  flake.nixosModules.audio = { pkgs, ... }: {
+  flake.modules.nixos.audio = { pkgs, ... }: {
     security.rtkit.enable = true;
 
     services = {

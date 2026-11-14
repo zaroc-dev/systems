@@ -1,6 +1,6 @@
 { inputs, ... }:
 {
-  flake.nixosModules.mullvad =
+  flake.modules.nixos.mullvad =
     { pkgs, ... }:
     let
       pkgsUnstable = import inputs.nixpkgs-unstable {

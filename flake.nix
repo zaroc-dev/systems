@@ -13,10 +13,17 @@
 
     yuki.url = "github:zaroc-dev/yuki";
 
+    nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
+
     # helium = {
     #  url = "github:oxcl/nix-flake-helium-browser";
     #  inputs.nixpkgs.follows = "nixpkgs-unstable";
     #};
+
+    home-manager = {
+      url = "github:nix-community/home-manager/release-26.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";

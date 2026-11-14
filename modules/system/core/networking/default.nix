@@ -1,7 +1,7 @@
 { self, ... }: {
-  flake.nixosModules.networking = { ... }: {
+  flake.modules.nixos.networking = { ... }: {
 
-    imports = with self.nixosModules; [ vpn ];
+    imports = with self.modules.nixos; [ vpn ];
 
     networking.networkmanager.enable = true;
 

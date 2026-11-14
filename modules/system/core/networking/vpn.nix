@@ -1,5 +1,5 @@
 { self, ... }: {
-  flake.nixosModules.vpn = { pkgs, ... }: {
+  flake.modules.nixos.vpn = { pkgs, ... }: {
     networking.networkmanager = {
       plugins = with pkgs; [
         networkmanager-openconnect
@@ -7,7 +7,7 @@
       ];
     };
 
-    imports = with self.nixosModules; [
+    imports = with self.modules.nixos; [
       mullvad
     ];
 

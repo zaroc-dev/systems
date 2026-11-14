@@ -1,6 +1,6 @@
 { self, config, ... }: {
 
-  flake.nixosModules.boot =
+  flake.modules.nixos.boot =
     { pkgs, ... }:
     let
       username = config.userConfigOptions.defaultUser.name;
@@ -27,11 +27,9 @@
             secureBoot.enable = false;
 
             style = {
-
-              wallpapers = [ (self + "/wallpapers/cat_leaves.png") ];
+              wallpapers = [ (self + "/assets/wallpapers/cat_leaves.png") ];
               wallpaperStyle = "stretched";
               interface.branding = "${username} OS";
-
             };
           };
         };

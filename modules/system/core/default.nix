@@ -1,7 +1,7 @@
 { self, ... }: {
 
-  flake.nixosModules.core = { ... }: {
-    imports = with self.nixosModules; [
+  flake.modules.nixos.core = { ... }: {
+    imports = with self.modules.nixos; [
       nix-settings
       user
       networking
