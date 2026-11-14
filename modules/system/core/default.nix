@@ -8,6 +8,8 @@
       vm
       locale
       fonts
+      audio
+      boot
     ];
   };
 }

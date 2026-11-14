@@ -22,9 +22,6 @@
       self',
       ...
     }:
-    let
-      configDir = pkgs.copyPathToStore ./config;
-    in
     {
       packages = {
         niri = inputs.wrappers.wrappers.niri.wrap {
@@ -38,6 +35,8 @@
               (lib.getExe self'.packages.yuki)
             ];
 
+            prefer-no-csd = { };
+
             binds = {
               "Mod+Return".spawn-sh = lib.getExe self'.packages.kitty;
               "Mod+Q".close-window = { };
@@ -46,7 +45,9 @@
           };
 
           extraSettings = [
-            { include = "${configDir}/windowrules.kdl"; }
+            { include = ./rules.kdl; }
+            { include = ./monitor.kdl; }
+            { include = ./extra_binds.kdl; }
           ];
 
         };

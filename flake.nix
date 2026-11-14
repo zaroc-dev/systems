@@ -13,8 +13,13 @@
 
     yuki.url = "github:zaroc-dev/yuki";
 
-    helium = {
-      url = "github:oxcl/nix-flake-helium-browser";
+    # helium = {
+    #  url = "github:oxcl/nix-flake-helium-browser";
+    #  inputs.nixpkgs.follows = "nixpkgs-unstable";
+    #};
+
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
   };

@@ -13,6 +13,7 @@
         core
         desktop
         hiyuki
+        theme
       ]
       ++ [ ./_hardware-configuration.nix ];
   };

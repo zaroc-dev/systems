@@ -6,7 +6,9 @@
       niri
 
       sddm
-      helium
+
+      zen
+      # helium (not rly possible to do since the policies suck
     ];
   };
 }
