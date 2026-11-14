@@ -6,7 +6,7 @@
       niri
 
       sddm
-
+      spotify
       zen
       # helium (not rly possible to do since the policies suck
     ];

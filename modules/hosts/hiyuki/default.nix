@@ -14,6 +14,7 @@ in
       desktop
       theme
       core
+      gaming
       ./_hardware-configuration.nix
     ];
     homeModules = with flakeModules.homeManager; [ theme ];
