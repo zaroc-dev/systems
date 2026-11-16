@@ -6,9 +6,6 @@
       kitty
       niri
       gnome
-      spotify
-      discord
-      zen
     ];
 
     services = {
