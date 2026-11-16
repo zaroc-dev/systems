@@ -45,6 +45,13 @@
               xcursor-size = 24;
             };
 
+            input = {
+              mouse = {
+                accel-profile = "flat";
+                accel-speed = 0.0;
+              };
+            };
+
             binds = {
               "Mod+Return".spawn-sh = lib.getExe self'.packages.kitty;
               "Mod+Alt+S".spawn-sh = "noctalia msg screenshot-region";

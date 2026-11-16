@@ -6,6 +6,7 @@
       nvim
       starship
       git
+      tmux
     ];
   };
 }
