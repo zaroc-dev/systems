@@ -5,6 +5,7 @@
       fastfetch
       nvim
       starship
+      git
     ];
   };
 }

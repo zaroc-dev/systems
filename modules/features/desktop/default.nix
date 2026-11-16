@@ -13,7 +13,7 @@
       gvfs.enable = true;
     };
 
-    systemd.services.flatpak-reop = {
+    systemd.services.flatpak-repo = {
       wantedBy = [ "multi-user.target" ];
       after = [ "network-online.target" ];
       wants = [ "network-online.target" ];

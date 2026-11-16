@@ -184,7 +184,6 @@ position = "bottom_center"
 enabled = [ "noctalia/screen_recorder", "ishan0121/wallpaper-deck" ]
 
 [shell]
-app_icon_colorize = true
 corner_radius_scale = 1.2500000186264515
 font_family = "Inter"
 screen_time_enabled = true
@@ -205,4 +204,3 @@ wallpaper_scheme = "m3-tonal-spot"
 
 [wallpaper]
 transition_on_startup = true
-

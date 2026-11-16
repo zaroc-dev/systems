@@ -13,6 +13,8 @@
       };
 
       users.defaultUserShell = self'.packages.zsh;
+
+      environment.systemPackages = with pkgs; [ zoxide ];
     }
   );
 
@@ -65,10 +67,9 @@
               dl = "docker logs -f";
               dps = "docker ps";
 
-              # without "#host", nixos-rebuild uses the machine's hostname by itself
-              nrs = "sudo nixos-rebuild switch --flake ~/source/nixos/systems";
-              nrt = "sudo nixos-rebuild test --flake ~/source/nixos/systems";
-              nfu = "nix flake update --flake ~/source/nixos/systems";
+              nrs = "sudo nixos-rebuild switch --flake ~/systems";
+              nrt = "sudo nixos-rebuild test --flake ~/systems";
+              nfu = "nix flake update --flake ~/systems";
               ngc = "sudo nix-collect-garbage --delete-older-than 7d";
             };
 

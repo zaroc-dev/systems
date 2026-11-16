@@ -92,3 +92,9 @@ layout {
     struts {
     }
 }
+
+
+layer-rule {
+    match namespace="^noctalia-backdrop";
+    place-within-backdrop true;
+};

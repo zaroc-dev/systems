@@ -19,6 +19,7 @@ in
       input
       docker
       apps
+      windows-boot
       ./_hardware-configuration.nix
     ];
     homeModules = with flakeModules.homeManager; [

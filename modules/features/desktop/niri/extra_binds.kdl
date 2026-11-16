@@ -2,34 +2,11 @@ binds {
     // yuki and everyday apps
     Mod+H { show-hotkey-overlay; }
 
-    Mod+A hotkey-overlay-title="Start Menu" { spawn "yuki" "ipc" "call" "bar" "toggle" "start"; }
-    Mod+Space hotkey-overlay-title="App Launcher" { spawn "yuki" "ipc" "call" "launcher" "toggle"; }
     Mod+E hotkey-overlay-title="Open File Explorer" { spawn "nautilus"; }
-    Mod+L hotkey-overlay-title="Lock the Screen" { spawn "yuki" "ipc" "call" "lock" "lock"; }
-    Mod+Comma hotkey-overlay-title="Shell Settings" { spawn "yuki" "ipc" "call" "settings" "toggle"; }
     Mod+C hotkey-overlay-title="Open Code Editor" { spawn "code"; }
     Mod+B hotkey-overlay-title="Open Browser" { spawn "brave"; }
-    Mod+Shift+S hotkey-overlay-title="Capture Region" { spawn "yuki" "ipc" "call" "screenshot" "region"; }
-    Mod+V hotkey-overlay-title="Clipboard History" { spawn "yuki" "ipc" "call" "clipboard" "toggle"; }
-    Mod+Shift+W hotkey-overlay-title="Rinka Wallpaper Editor" { spawn "rinka"; }
-    Mod+N hotkey-overlay-title="Notifications" { spawn "yuki" "ipc" "call" "bar" "toggle" "notifications"; }
-    Mod+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
 
-    Alt+Tab hotkey-overlay-title="Switch Windows" { spawn "yuki" "ipc" "call" "switcher" "next"; }
-    Alt+Shift+Tab hotkey-overlay-title="Switch Windows Backward" { spawn "yuki" "ipc" "call" "switcher" "prev"; }
-
-    // yuki controls also show its on-screen display.
-    XF86AudioRaiseVolume allow-when-locked=true { spawn "yuki" "ipc" "call" "audio" "up" "10"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn "yuki" "ipc" "call" "audio" "down" "10"; }
-    XF86AudioMute allow-when-locked=true { spawn "yuki" "ipc" "call" "audio" "mute"; }
-    XF86AudioMicMute allow-when-locked=true { spawn "yuki" "ipc" "call" "audio" "micMute"; }
-    XF86AudioPlay allow-when-locked=true { spawn "yuki" "ipc" "call" "media" "toggle"; }
-    XF86AudioNext allow-when-locked=true { spawn "yuki" "ipc" "call" "media" "next"; }
-    XF86AudioPrev allow-when-locked=true { spawn "yuki" "ipc" "call" "media" "previous"; }
-
-    XF86MonBrightnessUp allow-when-locked=true { spawn "yuki" "ipc" "call" "brightness" "up"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "yuki" "ipc" "call" "brightness" "down"; }
 
     // Niri navigation and window management
     Mod+Tab repeat=false { toggle-overview; }
@@ -40,13 +17,13 @@ binds {
     Mod+Right { focus-column-right; }
     Mod+Up { focus-workspace-up; }
     Mod+Down { focus-workspace-down; }
-    
+
     Mod+Ctrl+Down { move-window-to-workspace-down; }
     Mod+Ctrl+Up   { move-window-to-workspace-up; }
 
     Mod+Ctrl+Left  { move-column-left-or-to-monitor-left; }
     Mod+Ctrl+Right { move-column-right-or-to-monitor-right; }
-    
+
     Mod+Shift+Left  { focus-monitor-left; }
     Mod+Shift+Right { focus-monitor-right; }
 
@@ -104,7 +81,7 @@ binds {
     Mod+R { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
-    
+
     Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
     Mod+Ctrl+F { expand-column-to-available-width; }

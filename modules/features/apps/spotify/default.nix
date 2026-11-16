@@ -7,8 +7,8 @@
       wrappedSpotify = inputs.wrappers.lib.wrapPackage {
         inherit pkgs;
         package = pkgs.spotify;
-        flags."--enable-features" = "UseOzonePlatform";
-        flags."--ozone-platform" = "wayland";
+        flags."--enable-features=UseOzonePlatform" = true;
+        flags."--ozone-platform=wayland" = true;
       };
     in
     {

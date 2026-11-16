@@ -10,6 +10,6 @@
   };
 
   flake.modules.homeManager.apps = { ... }: {
-    imports = with self.modules.homeManager; [ zed ];
+    imports = with self.modules.homeManager; [ zed vscode ];
   };
 }

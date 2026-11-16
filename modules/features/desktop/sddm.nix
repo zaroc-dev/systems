@@ -10,7 +10,7 @@
     programs.yuki = {
       sddm = {
         enable = true;
-        background = ../../../assets/wallpapers/cat_leaves.png;
+        background = ../../../assets/wallpapers/fractal.png;
       };
     };
   };

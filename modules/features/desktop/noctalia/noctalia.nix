@@ -3,7 +3,6 @@
   perSystem =
     {
       pkgs,
-      unstablePkgs,
       lib,
       ...
     }:
@@ -11,7 +10,7 @@
       packages.noctalia = inputs.wrappers.wrappers.noctalia.wrap {
         inherit pkgs;
 
-        package = unstablePkgs.noctalia;
+        package = pkgs.noctalia;
 
         settings =
           let
@@ -20,7 +19,7 @@
           in
           lib.recursiveUpdate baseConfig {
             wallpaper = {
-              default.path = "${assetsPath}/wallpapers/cat_leaves.png";
+              default.path = "${assetsPath}/wallpapers/fractal.png";
             };
             widget.control-center = {
               custom_image = "${assetsPath}/icons/nixos.svg";

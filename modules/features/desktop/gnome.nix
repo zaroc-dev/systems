@@ -28,13 +28,13 @@
             "org/gnome/shell/extensions/blur-my-shell/panel".blur = true;
             "org/gnome/shell/extensions/blur-my-shell".sigma = lib.gvariant.mkInt32 30;
             "org/gnome/desktop/background" = {
-              picture-uri = "file://${self + "/assets/wallpapers/cat_leaves.png"}";
-              picture-uri-dark = "file://${self + "/assets/wallpapers/cat_leaves.png"}";
+              picture-uri = "file://${self + "/assets/wallpapers/fractal.png"}";
+              picture-uri-dark = "file://${self + "/assets/wallpapers/fractal.png"}";
               picture-options = "zoom";
 
             };
             "org/gnome/desktop/screensaver".picture-uri = "file://${
-              self + "/assets/wallpapers/cat_leaves.png"
+              self + "/assets/wallpapers/fractal.png"
             }";
             "org/gnome/shell/extensions/user-theme".name = "Tokyonight-Dark";
           };

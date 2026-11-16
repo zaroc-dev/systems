@@ -6,7 +6,6 @@
       username = config.userConfigOptions.defaultUser.name;
     in
     {
-
       boot = {
         kernelPackages = pkgs.linuxPackages_latest;
 
@@ -27,7 +26,7 @@
             secureBoot.enable = false;
 
             style = {
-              wallpapers = [ (self + "/assets/wallpapers/cat_leaves.png") ];
+              wallpapers = [ (self + "/assets/wallpapers/fractal.png") ];
               wallpaperStyle = "stretched";
               interface.branding = "${username} OS";
             };

@@ -12,10 +12,6 @@
         inherit system;
         config.allowUnfree = true;
       };
-      unstablePkgs = import inputs.nixpkgs-unstable {
-        inherit system;
-        config.allowUnfree = true;
-      };
     };
   };
 
