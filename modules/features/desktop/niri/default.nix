@@ -33,7 +33,7 @@
           settings = {
             spawn-at-startup = [
               (lib.getExe pkgs.xwayland-satellite)
-              (lib.getExe self'.packages.yuki)
+              (lib.getExe self'.packages.noctalia)
             ];
 
             prefer-no-csd = { };

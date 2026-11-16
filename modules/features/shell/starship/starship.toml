@@ -1,0 +1,82 @@
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Pills in the style of the yuki shell. Colors are ANSI names, so the prompt
+# follows the palette yuki writes into kitty (color0 is the pill surface).
+
+format = """
+$hostname\
+$directory\
+([](fg:black)$git_branch$git_status[ ](bg:black)[](fg:black) )\
+$fill\
+$cmd_duration\
+([](fg:black)$nix_shell$nodejs$rust$golang$php$dotnet[ ](bg:black)[](fg:black) )\
+$time
+$character"""
+
+[fill]
+symbol = " "
+
+# The pill's format (color + icon) is set per host in modules/home/starship.nix.
+[hostname]
+ssh_only = false
+ssh_symbol = " 󰣀"
+
+[directory]
+style = "bold fg:blue bg:black"
+read_only = " 󰌾"
+read_only_style = "fg:red bg:black"
+format = "[](fg:black)[ $path]($style)[$read_only ]($read_only_style)[](fg:black) "
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = " "
+format = "[ $symbol$branch](fg:green bg:black)"
+
+[git_status]
+format = "[( $all_status$ahead_behind)](fg:red bg:black)"
+
+[cmd_duration]
+min_time = 2000
+format = "[󰔟 $duration](fg:yellow) "
+
+[nix_shell]
+symbol = " "
+heuristic = false
+format = "[ $symbol$name](fg:blue bg:black)"
+
+[nodejs]
+symbol = " "
+format = "[ $symbol($version)](fg:cyan bg:black)"
+
+[rust]
+symbol = " "
+format = "[ $symbol($version)](fg:cyan bg:black)"
+
+[golang]
+symbol = " "
+format = "[ $symbol($version)](fg:cyan bg:black)"
+
+[php]
+symbol = " "
+format = "[ $symbol($version)](fg:cyan bg:black)"
+
+[dotnet]
+format = "[ $symbol($version)](fg:cyan bg:black)"
+
+[time]
+disabled = false
+time_format = "%R"
+format = "[](fg:black)[  $time ](fg:white bg:black)[](fg:black)"
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](bold green)"

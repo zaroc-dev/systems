@@ -1,5 +1,4 @@
 { inputs, ... }: {
-
   flake.modules.nixos.sddm = { ... }: {
     imports = [ inputs.yuki.nixosModules.yuki ];
 
@@ -11,7 +10,7 @@
     programs.yuki = {
       sddm = {
         enable = true;
-        # background = ./something.png;
+        background = ../../../assets/wallpapers/cat_leaves.png;
       };
     };
   };

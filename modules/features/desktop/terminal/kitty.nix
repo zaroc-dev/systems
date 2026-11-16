@@ -27,7 +27,7 @@
             "FONTCONFIG_FILE" = "${fontConfig}";
           };
           font = {
-            name = "JetbransMono Nerd Font Mono";
+            name = "JetbrainsMono Nerd Font Mono";
             size = 11;
           };
 

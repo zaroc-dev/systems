@@ -6,5 +6,18 @@
     "aarch64-darwin"
   ];
 
+  perSystem = { system, ... }: {
+    _module.args = {
+      pkgs = import inputs.nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
+      unstablePkgs = import inputs.nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
+    };
+  };
+
   imports = [ inputs.flake-parts.flakeModules.modules ];
 }

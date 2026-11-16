@@ -11,14 +11,12 @@
 
     wrappers.url = "github:nix-community/nix-wrapper-modules";
 
-    yuki.url = "github:zaroc-dev/yuki";
+    yuki = {
+      url = "github:zaroc-dev/yuki";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
-
-    # helium = {
-    #  url = "github:oxcl/nix-flake-helium-browser";
-    #  inputs.nixpkgs.follows = "nixpkgs-unstable";
-    #};
 
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";

@@ -1,19 +1,14 @@
 { self, ... }: {
   flake.modules.nixos.desktop = { pkgs, ... }: {
     imports = with self.modules.nixos; [
-
       avatar
-
+      sddm
       kitty
-
       niri
       gnome
-
-      sddm
       spotify
       discord
       zen
-      # helium (not rly possible to do since the policies suck
     ];
 
     services = {

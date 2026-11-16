@@ -15,8 +15,15 @@ in
       theme
       core
       gaming
+      nvidia
+      input
+      docker
+      apps
       ./_hardware-configuration.nix
     ];
-    homeModules = with flakeModules.homeManager; [ theme ];
+    homeModules = with flakeModules.homeManager; [
+      theme
+      apps
+    ];
   };
 }

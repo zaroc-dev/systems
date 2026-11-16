@@ -10,6 +10,7 @@
       fonts
       audio
       boot
+      nix-ld
     ];
   };
 }

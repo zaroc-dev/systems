@@ -10,11 +10,12 @@
       ];
     in
     {
-
       services.desktopManager.gnome.enable = true;
 
       environment.systemPackages = extensions ++ [ pkgs.tokyonight-gtk-theme ];
-
+      environment.gnome.excludePackages = with pkgs; [
+        gnome-initial-setup
+      ];
       services.gnome.gnome-initial-setup.enable = false;
 
       programs.dconf.profiles.user.databases = [
@@ -24,7 +25,7 @@
               disable-user-extensions = false;
               enabled-extensions = map (e: e.extensionUuid) extensions;
             };
-            "org/gnome/shell/extensions/blur-my-shell/panel".blue = true;
+            "org/gnome/shell/extensions/blur-my-shell/panel".blur = true;
             "org/gnome/shell/extensions/blur-my-shell".sigma = lib.gvariant.mkInt32 30;
             "org/gnome/desktop/background" = {
               picture-uri = "file://${self + "/assets/wallpapers/cat_leaves.png"}";
