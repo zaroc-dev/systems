@@ -3,9 +3,8 @@
     imports = with self.modules.nixos; [
       discord
       spotify
-
       matlab
-      zen
+      browsers
     ];
   };
 

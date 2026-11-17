@@ -107,8 +107,10 @@
 
             source ${./devenv.sh}
 
-            if command -v fastfetch >/dev/null; then fastfetch
-            else ${lib.getExe self'.packages.fastfetch}; fi
+            if [[ -z "$IN_NIX_SHELL" && -z "$DEVENV_ROOT" && -z "$TMUX" && "$TERM_PROGRAM" != "vscode" && "$TERM_PROGRAM" != "zed" ]]; then
+                if command -v fastfetch >/dev/null; then fastfetch
+                else ${lib.getExe self'.packages.fastfetch}; fi
+            fi
           '';
         };
       };

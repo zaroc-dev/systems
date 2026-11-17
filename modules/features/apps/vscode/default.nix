@@ -24,6 +24,7 @@
           "explorer.confirmPasteNative" = false;
           "vsicons.dontShowNewVersionMessage" = true;
           "markdown-pdf.executablePath" = "${pkgs.google-chrome}/bin/google-chrome-stable";
+          "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font"
         };
 
         extensions =
