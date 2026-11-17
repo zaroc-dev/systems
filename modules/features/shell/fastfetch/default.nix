@@ -41,7 +41,7 @@
             logo = {
               type = "kitty-icat";
               source = lib.mkDefault "${../../../../assets/splash/nixos.png}";
-              width = 25;
+              width = 35;
               position = "left";
             };
 

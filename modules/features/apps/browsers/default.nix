@@ -1,6 +1,6 @@
-{ ... }: {
+{ self, ... }: {
 
-  flake.modules.nixos.browsers = { ... }: {
+  flake.modules.nixos.browsers = { pkgs, ... }: {
     imports = with self.modules.nixos; [ zen ];
 
     environment.systemPackages = with pkgs; [
