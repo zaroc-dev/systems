@@ -15,7 +15,8 @@ in
       theme
       core
       gaming
-
+      input
+      dev
       docker
       apps
       ./_hardware-configuration.nix
