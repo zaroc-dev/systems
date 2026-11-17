@@ -19,6 +19,7 @@ in
       input
       dev
       apps
+      ai
       windows-boot
       ./_hardware-configuration.nix
     ];

@@ -32,7 +32,15 @@
             };
           };
         };
-
+        plymouth = {
+          enable = true;
+          theme = "spinner_alt";
+          themePackages = with pkgs; [
+            (adi1090x-plymouth-themes.override {
+              selected_themes = [ "spinner_alt" ];
+            })
+          ];
+        };
       };
       environment.systemPackages = with pkgs; [
         efibootmgr

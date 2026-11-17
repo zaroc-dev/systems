@@ -4,7 +4,7 @@
     environment.systemPackages = with pkgs; [
       bun
       nodejs
-      pnpn
+      pnpm
     ];
   };
 }

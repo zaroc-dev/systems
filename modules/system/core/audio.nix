@@ -1,5 +1,4 @@
 { ... }: {
-
   flake.modules.nixos.audio = { pkgs, ... }: {
     security.rtkit.enable = true;
 
@@ -15,6 +14,5 @@
         pulse.enable = true;
       };
     };
-
   };
 }

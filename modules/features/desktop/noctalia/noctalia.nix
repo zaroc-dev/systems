@@ -12,10 +12,14 @@
 
         package = pkgs.noctalia;
 
+        runtimePkgs = with pkgs; [
+          gpu-screen-recorder
+        ];
+
         settings =
           let
             assetsPath = ../../../../assets;
-            baseConfig = builtins.fromTOML (builtins.readFile ./noctalia-config.toml);
+            baseConfig = builtins.fromTOML (builtins.readFile ./noctalia.toml);
           in
           lib.recursiveUpdate baseConfig {
             wallpaper = {

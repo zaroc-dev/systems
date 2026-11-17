@@ -11,6 +11,8 @@
       audio
       boot
       nix-ld
+      bluetooth
+      graphics
     ];
   };
 }
