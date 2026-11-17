@@ -17,7 +17,7 @@ in
       gaming
       nvidia
       input
-      docker
+      dev
       apps
       windows-boot
       ./_hardware-configuration.nix

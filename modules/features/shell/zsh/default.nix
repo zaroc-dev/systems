@@ -74,6 +74,7 @@
             };
 
           zshrc.content = ''
+
             export EDITOR=${self'.packages.nvim}
             export PATH="$HOME/.local/bin:$PATH"
 
@@ -96,10 +97,15 @@
             export STARSHIP_CONFIG=''${STARSHIP_CONFIG:-${self'.packages.starship}/starship.toml}
             eval "$(${lib.getExe self'.packages.starship} init zsh)"
             eval "$(${lib.getExe pkgs.zoxide} init zsh --cmd cd)"
+            eval "$(${lib.getExe pkgs.devenv} hook zsh)"
 
             source ${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
             # must come after all widgets and bindkeys
             source ${pkgs.zsh-syntax-highlighting}/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+            ${lib.getExe pkgs.any-nix-shell} zsh | source /dev/stdin
+
+            source ${./devenv.sh}
 
             if command -v fastfetch >/dev/null; then fastfetch
             else ${lib.getExe self'.packages.fastfetch}; fi
