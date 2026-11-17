@@ -50,6 +50,10 @@
                 accel-profile = "flat";
                 accel-speed = 0.0;
               };
+
+              touchpad = {
+                tap = { };
+              };
             };
 
             binds = {
