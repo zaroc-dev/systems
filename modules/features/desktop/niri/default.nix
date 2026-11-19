@@ -58,7 +58,8 @@
 
             binds = {
               "Mod+Return".spawn-sh = lib.getExe self'.packages.kitty;
-              "Mod+Alt+S".spawn-sh = "noctalia msg screenshot-region";
+              "Mod+Shift+S".spawn-sh = "noctalia msg screenshot-region";
+              "Mod+S".spawn-sh = "noctalia msg screenshot-fullscreen";
               "Mod+Q".close-window = { };
 
               # noctalia binds

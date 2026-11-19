@@ -7,6 +7,7 @@
       starship
       git
       tmux
+      opencode
     ];
   };
 }
