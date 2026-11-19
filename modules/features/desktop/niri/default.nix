@@ -89,6 +89,7 @@
             { include = ./rules.kdl; }
             { include = ./monitor.kdl; }
             { include = ./extra_binds.kdl; }
+            { include = ./colors.kdl; }
           ];
         };
 

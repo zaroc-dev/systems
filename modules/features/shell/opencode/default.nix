@@ -1,6 +1,6 @@
 { inputs, moduleWithSystem, ... }: {
 
-  flake.modules.nixos.kitty = moduleWithSystem (
+  flake.modules.nixos.opencode = moduleWithSystem (
     { self' }: {
       environment.systemPackages = [ self'.packages.opencode ];
     }
